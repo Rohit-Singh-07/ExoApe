@@ -64,10 +64,26 @@ const Home = () => {
           <GiStarShuriken />
           <h2>Featured Projects</h2>
         </div>
-        <div>
+        <div className=" sm:flex justify-between">
           <div>
-          <h1 className="text-[18vw]">Work</h1>
-          <p>Highlights of cases that we passionately built with forward-thinking clients and friends over the years.</p>
+            <h1 className="text-[18vw]">Work</h1>
+            <p>
+              Highlights of cases that we passionately built with
+              forward-thinking clients and friends over the years.
+            </p>
+          </div>
+          <div className="relative w-full sm:w-[30vw] h-[100vw] sm:h-[50vw] py-10">
+            <video
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+             src="https://download-video.akamaized.net/v3-1/playback/66710880-7060-4d65-965e-38a29da54c52/5ac47112?__token__=st=1713274832~exp=1713289232~acl=%2Fv3-1%2Fplayback%2F66710880-7060-4d65-965e-38a29da54c52%2F5ac47112%2A~hmac=bea111f8657645faa9973e7f9df3bbb8ab8eba6ce5cc879a79d75cb297b2388e&r=dXMtY2VudHJhbDE%3D"></video>
+            <a href="https://www.exoape.com/work/rino-pelle">
+            <img 
+            className="w-full h-full absolute top-0 hover:hidden sm:flex hidden object-cover"
+            src="https://a.storyblok.com/f/133769/2400x2990/b66359da25/rino-pelle-hero.jpg/m/2400x2990/filters:quality(80)" alt="" />
+            </a>
           </div>
         </div>
       </div>
