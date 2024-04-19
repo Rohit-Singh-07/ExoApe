@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 
 const NavBar = () => {
+
   return (
     <div className="w-[98.8vw] sm:h-[5.2vw] h-[15vw] sm:px-[3.5vw] px-[7vw] flex items-end justify-between z-10 absolute">
       <svg
