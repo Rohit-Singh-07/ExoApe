@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { gsap, Linear, Power4, ScrollTrigger } from "gsap/all";
+import { motion } from "framer-motion";
 
 export default function ImageShow() {
 
@@ -90,9 +91,14 @@ export default function ImageShow() {
         <h1 className="h-[18vw] sm:h-[10vw]">Spread</h1>
         <h1>the News</h1>
         </div>
-        <div className="text-center w-[60vw]">
+        <motion.div
+        initial={{ opacity: 0, rotateX: 90 }}
+        whileInView={{ opacity: 1, rotateX: 0 }}
+        viewport={{once: true}}
+        transition={{ delay: 0.3, duration: 1 }}
+         className="text-center w-[60vw]">
             <p>Find out more about our work on these leading design and technology platforms.</p>
-        </div>
+        </motion.div>
         <a className="underline" href="https://www.exoape.com/news">Browse all news</a>
       </div>
     </div>

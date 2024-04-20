@@ -12,9 +12,9 @@ const PlayReel = () => {
     gsap.to(videodiv.current, {
       scrollTrigger: {
         trigger: parent.current,
-        // start: "top top",
-        // end: "bottom bottom",
-        top: "0 0",
+        start: "top top",
+        end: "bottom bottom",
+        // top: "0 0",
         scrub: 1,
         pin: true,
         // pinSpacing: true,
@@ -29,9 +29,9 @@ const PlayReel = () => {
     gsap.to(playreel.current, {
       scrollTrigger: {
         trigger: parent.current,
-        // start: "top top",
-        // end: "bottom bottom",
-        top: "0 0",
+        start: "top top",
+        end: "bottom bottom",
+        // top: "0 0",
         scrub: 1,
         // pin: true,
         // pinSpacing: true,

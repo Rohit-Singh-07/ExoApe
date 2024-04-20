@@ -76,9 +76,10 @@ const Home = () => {
             "exceptional experiences where people",
             "live, work, and unwind.",
           ].map((elem, idx) => (
-            <motion.div className=" overflow-hidden">
+            <motion.div
+            key={idx}
+             className=" overflow-hidden">
               <motion.p
-                key={idx}
                 initial={{ opacity: 0, rotateX: 90 }}
                 animate={{ opacity: 1, rotateX: 0 }}
                 transition={{ delay: 0.3 * idx, duration: 1 }}
@@ -91,7 +92,7 @@ const Home = () => {
 
         <div className="mt-4 sm:mt-0">
         {["Digital", "Design", "Experience"].map((elem, idx) => (
-          <div className="overflow-hidden sm:overflow-visible">
+          <div key={idx} className="overflow-hidden sm:overflow-visible">
             <motion.div
               initial={{ opacity: 0, y: 100, rotate: 45 }}
               animate={{ opacity: 1, y: 0, rotate: 0, transformOrigin: "left" }}
@@ -134,13 +135,21 @@ const Home = () => {
         </div>
         <div className=" sm:flex justify-between">
           <div>
-            <h1 className="text-[18vw]">Work</h1>
+            <div className="overflow-hidden h-fit"><motion.h1 
+            initial={{ opacity: 0, y: 200, rotate: 45 }}
+            whileInView={{ opacity: 1, y: 0, rotate: 0, transformOrigin: "left" }}
+            viewport={{once: true}}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            className="text-[18vw]">Work</motion.h1></div>
             <p>
               Highlights of cases that we passionately built with
               forward-thinking clients and friends over the years.
             </p>
           </div>
-          <div className="relative w-full sm:w-[30vw] h-[100vw] sm:h-[50vw] py-10">
+          <div
+          data-scroll
+          data-scroll-speed="0.2"
+           className="relative w-full sm:w-[30vw] h-[100vw] sm:h-[50vw] py-10">
             <video
               className="w-full h-full object-cover"
               autoPlay
